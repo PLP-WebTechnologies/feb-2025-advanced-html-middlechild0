@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Features Demo</title>
+</head>
+<body>
+    <header>
+        <h1>HTML5 Features Demonstration</h1>
+    </header>
+    
+    <main>
+        <!-- Roman numeral ordered list -->
+        <section>
+            <h2>Course Outline</h2>
+            <ol type="I">
+                <li>Introduction to HTML5</li>
+                <li>Basic Document Structure</li>
+                <li>Working with Lists and Tables</li>
+                <li>Forms and Input Validation</li>
+                <li>Multimedia Integration</li>
+            </ol>
+        </section>
+
+        <!-- External image from Pexels -->
+        <section>
+            <h2>Featured Image</h2>
+            <img src="https://images.pexels.com/photos/1591447/pexels-photo-1591447.jpeg" 
+                 alt="Coding on a laptop" 
+                 width="600">
+        </section>
+
+        <!-- Contact table -->
+        <section>
+            <h2>Contact Directory</h2>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Address</th>
+                        <th>Mobile</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Sarah Wairimu</td>
+                        <td>Pipeline, Nairobi</td>
+                        <td>+254728982781</td>
+                        <td>sarah.wairimu@outlook.com</td>
+                    </tr>
+                    <tr>
+                        <td>Michael Chege</td>
+                        <td>Parklands, Nairobi</td>
+                        <td>+254753627814</td>
+                        <td>m!chege@yahoo.com</td>
+                    </tr>
+                    <tr>
+                        <td>Emma Ronda</td>
+                        <td>Ong'ata Rongai</td>
+                        <td>+254784523264</td>
+                        <td>emmaRonda@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td>James Wekesa</td>
+                        <td>Kirigiti, Kiambu</td>
+                        <td>+254789164723</td>
+                        <td>j.wekesa@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td>Olivia Kimani</td>
+                        <td>Nyandarua, Laikipia</td>
+                        <td>+254768948376</td>
+                        <td>Oliviakim@yahoo.com</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Registration form with validation -->
+        <section>
+            <h2>Registration Form</h2>
+            <form>
+                <!-- Name field -->
+                <div>
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                </div>
+                
+                <!-- Email field with validation -->
+                <div>
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                </div>
+                
+                <!-- Password with pattern -->
+                <div>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" 
+                           placeholder="Create a password" 
+                           pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+                           title="Must contain at least one number, one uppercase and lowercase letter, and at least 8 characters"
+                           required>
+                </div>
+                
+                <!-- Date field -->
+                <div>
+                    <label for="birthdate">Date of Birth:</label>
+                    <input type="date" id="birthdate" name="birthdate" required>
+                </div>
+                
+                <!-- Dropdown selection -->
+                <div>
+                    <label for="course">Select Course:</label>
+                    <select id="course" name="course" required>
+                        <option value="">-- Select a course --</option>
+                        <option value="html">HTML5 Fundamentals</option>
+                        <option value="css">CSS3 Advanced</option>
+                        <option value="js">JavaScript for Beginners</option>
+                        <option value="react">React Framework</option>
+                    </select>
+                </div>
+                
+                <!-- Radio buttons -->
+                <div>
+                    <p>Experience Level:</p>
+                    <input type="radio" id="beginner" name="experience" value="beginner" required>
+                    <label for="beginner">Beginner</label>
+                    
+                    <input type="radio" id="intermediate" name="experience" value="intermediate">
+                    <label for="intermediate">Intermediate</label>
+                    
+                    <input type="radio" id="advanced" name="experience" value="advanced">
+                    <label for="advanced">Advanced</label>
+                </div>
+                
+                <!-- Checkboxes -->
+                <div>
+                    <p>Interests (select all that apply):</p>
+                    <input type="checkbox" id="web-dev" name="interests" value="web-dev">
+                    <label for="web-dev">Web Development</label>
+                    
+                    <input type="checkbox" id="mobile-dev" name="interests" value="mobile-dev">
+                    <label for="mobile-dev">Mobile Development</label>
+                    
+                    <input type="checkbox" id="ui-design" name="interests" value="ui-design">
+                    <label for="ui-design">UI/UX Design</label>
+                </div>
+                
+                <!-- Terms agreement checkbox -->
+                <div>
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">I agree to the Terms and Conditions</label>
+                </div>
+                
+                <!-- Submit button -->
+                <div>
+                    <button type="submit">Register Now</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Multimedia elements -->
+        <section>
+            <h2>Multimedia Examples</h2>
+            
+            <!-- Audio element -->
+            <h3>Audio Sample</h3>
+            <audio controls>
+                <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            
+            <!-- Video element -->
+            <h3>Video Sample</h3>
+            <video width="600" height="400" controls>
+                <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
+                Your browser does not support the video element.
+            </video>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 HTML5 Features Assignments</p>
+    </footer>
+</body>
+</html>
